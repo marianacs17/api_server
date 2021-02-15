@@ -6,6 +6,9 @@ const axios = require('axios');
 //Using packages
 const app = express();
 
+//Set PORT for Heroku
+let port = process.env.PORT || 8080     //8080 es preestablecido de HTTP
+
 //Middleware to read json objects
 app.use(express.json());
 app.use(morgan('dev'));
@@ -48,6 +51,6 @@ app.get('/rick/:id',(req,res)=> {
 })
 
 //Listen Server
-app.listen(4000, () =>{
-    console.log("Server running on port 4000");
+app.listen(port, () =>{
+    console.log("Server running on port " + port);
 })
