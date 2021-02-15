@@ -46,7 +46,7 @@ app.get('/rick/:id',(req,res)=> {
         })
         .catch(function(error){
             console.log(error);
-            res.send(error);
+            res.send(error);    
         });
 })
 
