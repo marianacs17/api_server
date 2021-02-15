@@ -32,6 +32,7 @@ app.post('/test_post',(req,res)=>{
 })
 
 //Testing for Axios APIs
+//Axios would be working as a "bridge" for our local API
 //Using parameters
 app.get('/rick/:id',(req,res)=> {
     const URL = `https://rickandmortyapi.com/api/character/ ${req.params.id}`
